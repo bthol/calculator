@@ -1,0 +1,22 @@
+* {
+    box-sizing: border-box;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.app-container {
+    width: 75vmin;
+    padding: 3vmin;
+    background: #2f2f2f;
+}
+
+.screen {
+    width: 50vmin;
+    height: 10vmin;
+    margin: 0 auto;
+    background: hsl(55, 50%, 80%);
+}
+
+.button {
+    
+}
