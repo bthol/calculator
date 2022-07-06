@@ -37,7 +37,6 @@
 #screen-content {
     grid-row: 1;
     grid-column: 1 / 3;
-    background: red;
 }
 #equal-sign {
     grid-row: 2;
@@ -50,8 +49,8 @@
 
 .buttons {
     grid-row: 3;
-    width: max-content;
-    height: max-content;
+    width: min-content;
+    height: min-content;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr; /* 4 columns */
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr; /* 5 rows */
@@ -60,18 +59,31 @@
     background: var(--color-bckgrnd-2);
 }
 .button {
-    font-size: 100%;
     position: relative;
+    font-size: 100%;
     padding: 0px 8px;
     border-radius: 5px 5px 3px 3px;
     color: var(--color-font);
-    background: var(--color-fill-2);
-    border: 3px solid black;
-    box-shadow: 0 2.5px 0 var(--color-border-2);
 }
-.button:active {
-    box-shadow: none;
-    top: 2.5px;
+.button.normal {
+    background: var(--color-fill-2);
+    border: 2.5px solid hsl(0, 0%, 12%);
+    border-bottom: hidden;
+    box-shadow: 0 2.5px 0 var(--color-fill-2);
+}
+.button.normal:active {
+    border-bottom: 2.5px hsl(0, 0%, 12%);
+    box-shadow: 0 2.5px 0 hsl(0, 0%, 6%);
+    top: 1px;
+}
+.button.orange {
+    background: hsl(16, 100%, 50%);
+    border: 2.5px solid hsl(16, 84%, 48%);
+    box-shadow: 0 2.5px 0 hsl(16, 84%, 48%);
+}
+.button.orange:active {
+    box-shadow: 0 2.5px 0 hsl(16, 84%, 36%);
+    top: 1.5px;
 }
 
 .button.special { /* special operations section */
@@ -86,8 +98,7 @@
 
 /* individual buttons */
 #btn-clear {
-    background: #ff4400;
-    border: 3px solid #e14a14;
+
 }
 #btn-squared {
     grid-column: 2;
@@ -152,6 +163,4 @@
 }
 #btn-equals {
     grid-row: 5;
-    background: #ff4400;
-    border: 3px solid #e14a14;
 }
